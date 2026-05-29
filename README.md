@@ -4,7 +4,11 @@
 
 This project demonstrates the preprocessing of an Email Phishing Detection dataset to prepare it for Machine Learning models using Python and Scikit-learn.
 
-## Dataset (Before Preprocessing)
+## Dataset Files
+
+### Before Preprocessing
+
+**File:** `original_dataset.csv`
 
 Features:
 
@@ -18,31 +22,26 @@ Features:
 * email_length_words
 * is_phishing
 
-## Preprocessing Performed
+### After Preprocessing
 
-* Inspected and explored the dataset
+**File:** `processed_email_dataset.csv`
+
+Changes:
+
 * Extracted **Domain** and **Extension** from sender_email
-* Removed unnecessary columns (`email_id`, `sender_email`)
-* Applied **One-Hot Encoding** to:
+* Removed `email_id` and `sender_email`
+* One-Hot Encoded:
 
   * subject
   * Domain
   * Extension
-* Applied **Standardization** to:
+* Standardized:
 
   * urgency_score
   * spelling_errors
   * email_length_words
-* Performed correlation analysis
 
-## Dataset (After Preprocessing)
-
-The final dataset contains only numerical features, including:
-
-* Binary features (has_link, has_attachment)
-* Standardized numerical features
-* One-hot encoded subject, domain, and extension features
-* Target column: is_phishing
+The final dataset contains only numerical features ready for Machine Learning.
 
 ## Technologies Used
 
@@ -61,6 +60,13 @@ The final dataset contains only numerical features, including:
 * Feature Scaling
 * Correlation Analysis
 * Machine Learning Data Preparation
+
+## Files Included
+
+* `email_phishing_preprocessing.ipynb`
+* `original_dataset.csv`
+* `processed_email_dataset.csv`
+* `README.md`
 
 ## Author
 
